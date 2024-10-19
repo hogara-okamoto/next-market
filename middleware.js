@@ -3,7 +3,7 @@ import { JWTClaimValidationFailed } from "jose/errors"
 import { NextResponse } from "next/server"
 
 export async function middleware(request) {
-    const token = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImR1bW15QGdtYWlsLmNvbSIsImV4cCI6MTcyOTM3NTMyOH0.BdOA7wkfIiZQx-QZQ-1ati9-ws0f-YRSLaLiZL51JZg"
+    const token = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImR1bW15M0BnbWFpbC5jb20iLCJleHAiOjE3Mjk0NjAwMzV9.-7yteNbb38ZejTamsSOl0UVhovit1JhY3gUUXagdbGM"
     //await request.headers.get("Authorization")?.split(" ")[1]
     if (!token) {
         return NextResponse.json({message: "トークンがありません"})
