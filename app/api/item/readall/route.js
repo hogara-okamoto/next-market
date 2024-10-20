@@ -8,6 +8,7 @@ export async function GET(){
         const allitems = await ItemModel.find()
         return NextResponse.json({message: "アイテム読み取り成功（オール）", allitems: allitems})
     } catch {
+        console.error("Error reading items:", error);
         return NextResponse.json({message: "アイテム読み取り失敗（オール）"})
     }
 }
