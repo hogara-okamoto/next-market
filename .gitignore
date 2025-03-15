@@ -37,3 +37,7 @@ next-env.d.ts
 
 #  env file
 .env
+
+# Allow tracking of .env.production
+!.env.development
+!.env.production

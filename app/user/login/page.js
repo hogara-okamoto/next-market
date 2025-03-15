@@ -8,7 +8,7 @@ const Login = () => {
     const handlesubmit = async(e) => {
         e.preventDefault()
         try {
-            const response = await fetch("http://localhost:3000/api/user/login", {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/user/login`, {
                 method: "POST",
                 headers: {
                     "Accept": "application/json",
@@ -29,7 +29,7 @@ const Login = () => {
 
     return (
         <div>
-            <h1>ログイン</h1>
+            <h1 className="page-title">ログイン</h1>
             <form onSubmit={handlesubmit}>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} 
                 type="text" name="email" placeholder="メールアドレス" required />

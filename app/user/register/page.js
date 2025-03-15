@@ -9,7 +9,7 @@ const Register = () => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         try {
-            const response = await fetch ("http://localhost:3000/api/user/register",
+            const response = await fetch (`${process.env.NEXT_PUBLIC_URL}/api/user/register`,
                 {
                     method: "POST",
                     headers: {
@@ -31,7 +31,7 @@ const Register = () => {
     }
     return (
         <div>
-            <h1>ユーザー登録</h1>
+            <h1 className="page-title">ユーザー登録</h1>
             <form onSubmit={handleSubmit}>
                 <input value={name} onChange={(e) => setName(e.target.value)} 
                 type="text" name="name" placeholder="名前" required />名前
