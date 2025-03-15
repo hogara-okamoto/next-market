@@ -8,7 +8,7 @@ const getAllItems = async() =>{
   return allItems
 }
 
-const ReadAllItems = async() => {
+const ReadAllItemsPage = async() => {
   const allItems = await getAllItems()
   return (
     <div className="grid-container-in">
@@ -24,4 +24,4 @@ const ReadAllItems = async() => {
   ) 
 }
 
-export default ReadAllItems
+export default ReadAllItemsPage
